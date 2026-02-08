@@ -1,0 +1,115 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+}
+
+/* Background */
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: 
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("lung_bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Glass card */
+.container {
+    width: 420px;
+    padding: 35px 30px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+    text-align: center;
+    color: #ffffff;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Title */
+h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: 25px;
+}
+
+/* Upload box */
+.upload-box {
+    border: 2px dashed rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* File input */
+input[type="file"] {
+    color: white;
+    font-size: 14px;
+}
+
+/* Predict button */
+input[type="submit"] {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    border: none;
+    padding: 12px 35px;
+    color: white;
+    font-size: 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+input[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 114, 255, 0.5);
+}
+
+/* Result card */
+.result {
+    margin-top: 25px;
+    padding: 18px;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.35);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Result text */
+.result p {
+    margin: 6px 0;
+    font-size: 16px;
+}
+
+.result strong {
+    color: #00e5ff;
+}
+
+/* Footer */
+.footer {
+    margin-top: 20px;
+    font-size: 11px;
+    opacity: 0.8;
+}

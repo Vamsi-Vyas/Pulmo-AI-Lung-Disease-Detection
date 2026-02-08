@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pulmo AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Pulmo AI</h1>
+    <p class="subtitle">AI-Powered Lung Disease Detection</p>
+
+    <form method="POST" enctype="multipart/form-data">
+        <div class="upload-box">
+            <input type="file" name="file" required>
+        </div>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+        <div class="result">
+            <p><strong>Disease:</strong> {{ prediction }}</p>
+        </div>
+    {% endif %}
+
+    <div class="footer">
+        Powered by CNN & Flask
+    </div>
+</div>
+
+</body>
+</html>
